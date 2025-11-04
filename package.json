@@ -1,20 +1,28 @@
 {
-  "name": "cursor-jabis",
+  "name": "jabis",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Jinhak Apply Business Integration System",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"pnpm --filter frontend dev\" \"pnpm --filter backend dev\"",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "build": "pnpm --filter backend build && pnpm --filter frontend build",
+    "build:frontend": "pnpm --filter frontend build",
+    "build:backend": "pnpm --filter backend build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hyeongseoplim/cursor-jabis.git"
   },
-  "keywords": [],
+  "keywords": ["university", "management", "solution"],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hyeongseoplim/cursor-jabis/issues"
   },
-  "homepage": "https://github.com/hyeongseoplim/cursor-jabis#readme"
+  "homepage": "https://github.com/hyeongseoplim/cursor-jabis#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
